@@ -1,0 +1,9 @@
+
+@import "_variables.css";
+
+.main {
+  background-color: var(--main-red);
+  height: var(--main-height);
+  width: var(--main-width);
+  z-index: 5000;
+}

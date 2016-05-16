@@ -1,0 +1,7 @@
+
+@import "_variables.css";
+
+body {
+  background-color: yellow;
+  height: var(--body-height);
+}
