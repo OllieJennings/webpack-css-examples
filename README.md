@@ -8,7 +8,7 @@ A template for CSS Optimisations in Webpack
 
 `npm start`
 
-This is the development command than will first clean the **build** folder & then generate the CSS bundle with an added source-maps.
+This is the development command than will first clean the **build** folder & then generate the CSS bundle with added source-maps.
 
 
 `npm run prod`
