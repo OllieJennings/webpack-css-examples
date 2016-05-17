@@ -1,6 +1,6 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.join(process.cwd(), '/bootstrap.js'),
@@ -24,6 +24,11 @@ module.exports = {
     require('postcss-cssnext')
   ]; },
   plugins: [
+    new CleanWebpackPlugin(['build/*.css', 'build/*.css.map', 'build/*.js', 'build/*.js.map'], {
+      root: process.cwd(),
+      verbose: true,
+      dry: false
+    }),
     new ExtractTextPlugin('[hash].css')
   ],
   colors: true,

@@ -25,10 +25,6 @@ module.exports = {
     require('postcss-cssnext'),
   ]; },
   plugins: [
-    // new styleLintPlugin({
-    //   files: '**/*.css',
-    //   failOnError: true
-    // }),
     new CleanWebpackPlugin(['build/*.css', 'build/*.css.map', 'build/*.js', 'build/*.js.map'], {
       root: process.cwd(),
       verbose: true,
