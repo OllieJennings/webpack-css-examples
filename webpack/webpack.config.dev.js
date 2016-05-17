@@ -1,6 +1,7 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+var styleLintPlugin = require('stylelint-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.join(process.cwd(), '/bootstrap.js'),
@@ -21,10 +22,20 @@ module.exports = {
       zindex: true,
       discardUnused: true
     }),
-    require('postcss-cssnext')
+    require('postcss-cssnext'),
   ]; },
   plugins: [
-    new ExtractTextPlugin('bundle.css')
+    // new styleLintPlugin({
+    //   files: '**/*.css',
+    //   failOnError: true
+    // }),
+    new CleanWebpackPlugin(['build/*.css', 'build/*.css.map', 'build/*.js', 'build/*.js.map'], {
+      root: process.cwd(),
+      verbose: true,
+      dry: false
+    }),
+    new ExtractTextPlugin('bundle.css'),
+
   ],
   colors: true,
   progress: true,
