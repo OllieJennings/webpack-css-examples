@@ -12,7 +12,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel', exclude: '/node_modules/' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss') }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:1]_[hash:base64:5]!postcss') }
     ]
   },
   postcss: function () { return [
@@ -34,12 +34,5 @@ module.exports = {
 
   ],
   colors: true,
-  progress: true,
-  devtool: 'source-map',
-  devServer: {
-    host: '127.0.0.1',
-    inline: true,
-    historyApiFallback: true,
-    contentBase: './build'
-  }
+  progress: true
 }

@@ -5,7 +5,7 @@
   "main": "bootstrap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack/webpack.config.dev.js --hot",
     "prod": "./node_modules/.bin/webpack --config webpack/webpack.config.prod.js"
   },
   "repository": {
