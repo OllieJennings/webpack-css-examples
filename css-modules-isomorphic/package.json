@@ -5,8 +5,12 @@
   "main": "bootstrap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack --config webpack/webpack.config.dev.js && ./node_modules/.bin/babel-node server.js",
-    "prod": "./node_modules/.bin/webpack --config webpack/webpack.config.prod.js"
+    "dev:build": "./node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
+    "dev:server": "./node_modules/.bin/babel-node server.js",
+    "prod:build": "./node_modules/.bin/webpack --config webpack/webpack.config.prod.js",
+    "prod:server": "./node_modules/.bin/babel-node server.js",
+    "start": "npm run dev:build && npm run dev:server",
+    "prod": "npm run prod:build && set NODE_ENV=production&&npm run prod:server"
   },
   "repository": {
     "type": "git",
