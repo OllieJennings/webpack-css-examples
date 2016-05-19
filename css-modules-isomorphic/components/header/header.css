@@ -1,0 +1,14 @@
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: silver;
+  color: black;
+}
+
+.hd__content {
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+}
