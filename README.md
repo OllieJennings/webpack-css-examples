@@ -1,4 +1,4 @@
-# webpack-css-examples
+# Webpack CSS Examples
 
 > A set of examples demonstrating how to bundle your CSS using Webpack, from a basic setup, all the way up to an isomorphic css-modules solution, containing development and production builds.
 
