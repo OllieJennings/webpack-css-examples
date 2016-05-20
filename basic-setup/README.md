@@ -1,5 +1,10 @@
-# basisc-setup
-A template for basic setup of using CSS optimized by Webpack
+# basic-setup
+
+A reference guide for the most simple and standard configuration for bundling your CSS via **Webpack**.
+
+This setup basically generates a seperate CSS bundle in the `build` folder. The CSS bundle is completely minified removing any comments (import or not) whilst also allowing you to use next generation CSS features.
+
+The main entry file is `bootstrap.js` where the CSS files are required.
 
 
 
