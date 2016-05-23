@@ -6,6 +6,8 @@ In this example, we do server-side rendering using **React** to demonstrate how 
 
 This example uses **Express** to generate a server than renders the **React** code and create the CSS-Module classnames, identical to that created by the front-end bundle.
 
+In order for the front-end bundle, an the server to share the same CSS-Module names, we use the package `css-modules-require-hook` with a config file  `cmrh.conf.js`, which contains the same naming format as that in the webpack config files.
+
 
 
 #### Commands
